@@ -1,6 +1,6 @@
 language: csharp
 solution: SpecflowSample.sln
-dotnet: 2.2.102
+dotnet: 2.2.0
 install:
   - dotnet restore ./SpecflowDotnetCoreSample.sln
   - dotnet build ./SpecflowDotnetCoreSample.sln
