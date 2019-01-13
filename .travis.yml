@@ -1,0 +1,8 @@
+language: csharp
+solution: SpecflowSample.sln
+install:
+  - dotnet restore ./SpecflowDotnetCoreSample.sln
+  - dotnet build ./SpecflowDotnetCoreSample.sln
+  - nuget install NUnit.ConsoleRunner -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./SpecflowDotnetCoreSample/bin/Debug/netcoreapp2.2/SpecflowDotnetCoreSample.dll --where "cat == mytag"
